@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/login-form",
+  "sourceRoot": "libs/login-form/src",
+  "prefix": "test-org",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/login-form"],
+      "options": {
+        "jestConfig": "libs/login-form/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/login-form/src/**/*.ts",
+          "libs/login-form/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
